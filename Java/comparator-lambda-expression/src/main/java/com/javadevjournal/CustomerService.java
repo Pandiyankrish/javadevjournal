@@ -10,14 +10,6 @@ public class CustomerService {
 
         sortByAge();
         sortByFirstAndSecondName();
-        sortInReverseOrder();
-    }
-
-    private static void sortInReverseOrder(){
-        List<Customer> customerList = getCustomers();
-        Comparator<Customer> customerComparator = Comparator.comparing(e-> e.getAge());
-        customerList.sort(customerComparator.reversed());
-        customerList.forEach(System.out::println);
     }
 
     private static void sortByFirstAndSecondName(){
